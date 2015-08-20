@@ -42,6 +42,9 @@ public class MainApplication {
 		5000l).duration());
 
 	System.out.println("Final Response:: " + res.respMessage);
+	// Shutdown the actor system. If we don't shutdown actorSystem out main
+	// method will not exit.
+	system.shutdown();
     }
 
 }
