@@ -19,8 +19,8 @@ public class MainApplication {
 	// application.json, application.properties]
 	// For custom name of conf file use
 	// ConfigFactory.load("name-of-conf-file-without-extension")
-	final ActorSystem system = ActorSystem.create("cluster-example",
-		ConfigFactory.load());
+	final ActorSystem system = ActorSystem.create(
+		"Akka-Single-Node-Example", ConfigFactory.load());
 	// This will create an actor with path: /user/hello
 	final ActorRef helloActor = system.actorOf(
 		Props.create(HelloActor.class), "hello");
