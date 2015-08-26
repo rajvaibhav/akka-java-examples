@@ -33,4 +33,22 @@ public class ActorSystemConfiguration {
 				"FindCustomerService"), "FindCustomerService");
 	return findCustomerService;
     }
+    
+    @Bean(name = "findAllCustomersService")
+    public ActorRef getFindAllCustomersService() {
+	final ActorRef findCustomerService = actorSystem()
+		.actorOf(
+			SpringExtProvider.get(actorSystem()).props(
+				"FindAllCustomersService"), "FindAllCustomersService");
+	return findCustomerService;
+    }
+    
+    @Bean(name = "createNewCustomerService")
+    public ActorRef getCreateNewCustomerService() {
+	final ActorRef findCustomerService = actorSystem()
+		.actorOf(
+			SpringExtProvider.get(actorSystem()).props(
+				"CreateNewCustomerService"), "CreateNewCustomerService");
+	return findCustomerService;
+    }
 }

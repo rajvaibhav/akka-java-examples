@@ -2,10 +2,13 @@ package com.example.vo;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class CustomerVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     private String id;
     private String firstName;
     private String lastName;
